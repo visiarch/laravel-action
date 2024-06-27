@@ -1,4 +1,4 @@
-![laravel Action](https://github.com/orgs/visiarch/laravel-action/blob/main/images/banner.png)
+![laravel Action](https://github.com/visiarch/laravel-action/blob/main/images/banner.png)
 
 # laravel-action
 
