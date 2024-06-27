@@ -25,7 +25,7 @@
   "require-dev": {},
   "autoload": {
     "psr-4": {
-      "Visiarch\\LaravelAction\\": "src"
+      "Visiarch\\ActionServiceTrait\\": "src"
     }
   },
   "scripts": {
