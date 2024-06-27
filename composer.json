@@ -1,0 +1,43 @@
+{
+    "name": "visiarch/laravel-action",
+    "description": "A simple Laravel package to create actions, using artisan commands",
+    "keywords": [
+        "php",
+        "github",
+        "laravel",
+        "Open Source",
+        "action",
+        "generator",
+        "command",
+        "laravel 9",
+        "laravel 10",
+        "laravel 11"
+    ],
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Visiarch\\LaravelAction\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gusti Bagus Suandana",
+            "email": "visiarch@gmail.com"
+        }
+    ],
+    "type": "library",
+    "require": {
+        "php": "^8.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0.1"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Visiarch\\ActionServiceTrait\\ActionServiceProvider"
+            ]
+        }
+    }
+}
