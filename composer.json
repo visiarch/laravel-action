@@ -43,7 +43,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Visiarch\\VisiarchActionServiceTrait\\ActionServiceProvider"
+        "Visiarch\\ActionServiceTrait\\ActionServiceProvider"
       ]
     }
   }
