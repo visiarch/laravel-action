@@ -2,7 +2,8 @@
 
 namespace Visiarch\ActionServiceTrait;
 
-use Illuminate\Support\ServiceProvider;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Visiarch\ActionServiceTrait\MakeAction;
 
 /**
@@ -14,15 +15,17 @@ use Visiarch\ActionServiceTrait\MakeAction;
  * file that was distributed with this source code.
  */
 
-class ActionServiceProvider extends ServiceProvider
+class ActionServiceProvider extends PackageServiceProvider
 {
     /**
      * Register the application services.
      *
      * @return void
      */
-    public function register(): void
+    public function configurePackage(Package $package): void
     {
-        $this->commands(MakeAction::class);
+        $package
+            ->name('laravel-action')
+            ->hasCommand(MakeAction::class);
     }
 }
