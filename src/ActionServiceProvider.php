@@ -16,12 +16,15 @@ use Spatie\LaravelPackageTools\PackageServiceProvider;
 class ActionServiceProvider extends PackageServiceProvider
 {
     /**
-     * Register the application services.
+     * Configure the package.
+     *
+     * @param  Package  $package  The Laravel package object.
      */
     public function configurePackage(Package $package): void
     {
+        // Configure the Laravel package.
         $package
-            ->name('laravel-action')
-            ->hasCommand(MakeAction::class);
+            ->name('laravel-action') // Set the package name.
+            ->hasCommand(MakeAction::class); // Register the command.
     }
 }
