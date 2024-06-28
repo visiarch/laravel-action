@@ -12,13 +12,12 @@ use Illuminate\Console\GeneratorCommand;
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-
 class MakeAction extends GeneratorCommand
 {
     /**
      * STUB_PATH.
      */
-    const STUB_PATH = __DIR__ . '/Stubs/';
+    const STUB_PATH = __DIR__.'/Stubs/';
 
     /**
      * The name and signature of the console command.
@@ -41,13 +40,12 @@ class MakeAction extends GeneratorCommand
      */
     protected $type = 'Action';
 
-
     /**
      * @return string
      */
     protected function getStub()
     {
-        return self::STUB_PATH . 'action.stub';
+        return self::STUB_PATH.'action.stub';
     }
 
     /**
@@ -56,13 +54,13 @@ class MakeAction extends GeneratorCommand
      * @return bool|null
      *
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
-     * @see \Illuminate\Console\GeneratorCommand
      *
+     * @see \Illuminate\Console\GeneratorCommand
      */
     public function handle()
     {
         if ($this->isReservedName($this->getNameInput())) {
-            $this->error('The name "' . $this->getNameInput() . '" is reserved by PHP.');
+            $this->error('The name "'.$this->getNameInput().'" is reserved by PHP.');
 
             return false;
         }
@@ -71,11 +69,11 @@ class MakeAction extends GeneratorCommand
 
         $path = $this->getPath($name);
 
-        if ((!$this->hasOption('force') ||
-                !$this->option('force')) &&
+        if ((! $this->hasOption('force') ||
+                ! $this->option('force')) &&
             $this->alreadyExists($this->getNameInput())
         ) {
-            $this->error($this->type . ' already exists!');
+            $this->error($this->type.' already exists!');
 
             return false;
         }
@@ -90,15 +88,13 @@ class MakeAction extends GeneratorCommand
         );
         $message = $this->type;
 
-        $this->info($message . ' created successfully.');
+        $this->info($message.' created successfully.');
     }
 
     /**
      * Build the class with the given name.
      *
-     * @param string $name
-     * @param $isInterface
-     * @return string
+     * @param  $isInterface
      *
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
@@ -111,13 +107,8 @@ class MakeAction extends GeneratorCommand
         return $this->replaceNamespace($stub, $name)->replaceClass($stub, $name);
     }
 
-
-    /**
-     * @param $rootNamespace
-     * @return string
-     */
     protected function getDefaultNamespace($rootNamespace): string
     {
-        return $rootNamespace . '\Actions';
+        return $rootNamespace.'\Actions';
     }
 }
