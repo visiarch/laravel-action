@@ -40,7 +40,7 @@ namespace App\Actions;
 
 /**
  * Class CreateUser
- * @package App\Services
+ * @package App\Actions
  */
 class CreateUser
 {
