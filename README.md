@@ -5,6 +5,8 @@
 [![Latest Stable Version](http://poser.pugx.org/visiarch/laravel-action/v)](https://packagist.org/packages/visiarch/laravel-action)
 [![License](http://poser.pugx.org/visiarch/laravel-action/license)](https://packagist.org/packages/visiarch/laravel-action)
 
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/bagussuandana)
+
 > A Simple Package to create actions, using artisan commands in laravel.
 
 This package extends the `make:` commands to help you easily create action classes in Laravel 9+.
@@ -59,6 +61,7 @@ class CreateUser
     }
 }
 ```
+
 ## Contributing
 
 Please feel free to fork this package and contribute by submitting a pull request to enhance the functionalities.
